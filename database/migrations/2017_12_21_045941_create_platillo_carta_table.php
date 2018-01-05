@@ -17,7 +17,8 @@ class CreatePlatilloCartaTable extends Migration
             $table->increments('id');
             $table->string('nombre', 45);
             $table->string('descripcion', 255)->nullable();
-            $table->decimal('precio',5,3);
+            $table->decimal('precio',5,2);
+            $table->string('tipo', 45);
             $table->timestamps();
         });
     }

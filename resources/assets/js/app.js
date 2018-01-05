@@ -1,22 +1,44 @@
 
 /**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
+ * First, we will load all of this project's Javascript utilities and other
+ * dependencies. Then, we will be ready to develop a robust and powerful
+ * application frontend using useful Laravel and JavaScript libraries.
  */
 
-require('./bootstrap');
+const segundosList = document.getElementById('segundos'),
+    entradasList = document.getElementById('entradas'),
+    postresList = document.getElementById('postres'),
+    bebidasList = document.getElementById('bebidas');
 
-window.Vue = require('vue');
+const entradasCarta = document.getElementById('entradasCarta'),
+    segundosCarta = document.getElementById('segundosCarta'),
+    bebidasCarta = document.getElementById('bebidasCarta'),
+    postresCarta = document.getElementById('postresCarta');
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+segundosList.addEventListener('click', () => {
+    segundosCarta.className = 'segundos';
+    entradasCarta.className = 'entradas ocultar';
+    postresCarta.className = 'postres ocultar';
+    bebidasCarta.className = 'bebidas ocultar';
+});
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+entradasList.addEventListener('click', () => {
+    segundosCarta.className = 'segundos ocultar';
+    entradasCarta.className = 'entradas';
+    postresCarta.className = 'postres ocultar';
+    bebidasCarta.className = 'bebidas ocultar';
+});
 
-const app = new Vue({
-    el: '#app'
+postresList.addEventListener('click', () => {
+    segundosCarta.className = 'segundos ocultar';
+    entradasCarta.className = 'entradas ocultar';
+    postresCarta.className = 'postres';
+    bebidasCarta.className = 'bebidas ocultar';
+});
+
+bebidasList.addEventListener('click', () => {
+    segundosCarta.className = 'segundos ocultar';
+    entradasCarta.className = 'entradas ocultar';
+    postresCarta.className = 'postres ocultar';
+    bebidasCarta.className = 'bebidas';
 });

@@ -13,4 +13,4 @@ class PlatilloCarta extends Model
     public function detallePedidos() {
         return $this->hasMany('DetallePedido');
     }
-}
+ }

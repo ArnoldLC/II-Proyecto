@@ -1,9 +1,125 @@
+// FUENTES
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700);
 
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+$font-family: 'Ubuntu', sans-serif;
+$normal: 400;
+$bold: 700;
 
-// Variables
-@import "variables";
+// COLORES
 
-// Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+$yell-fuerte: rgb(250,224,19);
+$yell-debil: rgb(251,235,107);
+$btn-succ: rgb(0,166,88);
+$btn-can: rgb(228,52,47);
+$logo: rgb(10,169,85);
+$cart: rgb(92,143,209);
+
+// RESET STYLES
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $font-family;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+
+  &__dashboard {
+    height: 90%;
+    display: flex;
+  }
+}
+
+.header {
+  height: 10%;
+  background: $yell-fuerte;
+}
+
+.sidebar {
+  height: 100%;
+  width: 20%;
+  background: $yell-debil;
+
+  &__menu {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.board {
+  width: 80%;
+  margin: 2rem 2rem;
+}
+
+.carta__opciones {
+
+  width: 40%;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+    }
+  }
+}
+
+.carta {
+
+  margin: 0.5rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  
+  &__container {
+    border: 1px solid #2F3133;
+  }
+
+  &__opcion {
+    padding: 0.5rem 0;
+  }
+
+  &__pedidos {
+    width: 60%;
+    padding: 0 1rem;
+  }
+}
+
+.actores {
+  margin: 0.5rem 0;
+  
+  label {
+    display: block;
+  }
+
+  select, input {
+    margin: 0.5rem 0;
+  }
+}
+
+.btn__succ {
+  display: block;
+}
+
+.ocultar {
+  display: none;
+}
+
+.header {
+
+  &__logo-container {
+    height: 100%;
+    width: 20%;
+  }
+
+  &__logo {
+    height: 100%;
+    margin: 0 auto;
+  }
+}

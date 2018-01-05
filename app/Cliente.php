@@ -8,7 +8,7 @@ class Cliente extends Model
 {
     protected $table = 'cliente';
 
-    protected $fillable = ['nombres', 'apellidos'];
+    protected $fillable = ['nombres'];
 
     public function pedidos() {
         return $this->hasMany('Pedido');
